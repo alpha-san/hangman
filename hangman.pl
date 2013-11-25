@@ -32,7 +32,7 @@ sub main {
 
         $solved = &checkWin($word);
 
-        system("clear");
+        system $^O eq 'MSWin32' ? 'cls' : 'clear';
 	}
 
     print join(" ", @guesses);
